@@ -1,0 +1,9 @@
+type AddSessionPayload {
+  session: String!
+  id: String!
+  endpoint: String!
+}
+
+extend type Mutation {
+  addSession(session: String!, endpoint: String!): AddSessionPayload
+}

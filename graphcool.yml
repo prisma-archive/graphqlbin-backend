@@ -1,0 +1,45 @@
+# Welcome to Graphcool!
+#
+# This file is the main config file for your Graphcool Project.
+# It's very minimal at this point and uses default values.
+# We've included a hello world function here.
+# Just uncomment it and run `graphcool deploy`
+#
+# Check out some examples:
+#    github.com/graphcool/examples
+#
+# Happy Coding!
+
+
+# GraphQL types
+types: ./types.graphql
+
+
+# uncomment this:
+
+functions:
+  session:
+    handler:
+      code:
+        src: ./src/session.js
+    type: resolver
+    schema: ./src/session.graphql
+  add-session:
+    handler:
+      code:
+        src: ./src/addSession.js
+    type: resolver
+    schema: ./src/addSession.graphql
+
+ 
+# Graphcool modules
+modules: {}
+
+
+# Model/Relation permissions
+permissions: []
+
+# Permanent Auth Token / Root Tokens
+rootTokens:
+- defaulttoken
+

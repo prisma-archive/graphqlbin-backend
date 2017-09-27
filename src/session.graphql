@@ -1,0 +1,8 @@
+type SessionPayload {
+  session: String!
+  endpoint: String!
+}
+
+extend type Query {
+  session(id: String): SessionPayload
+}
